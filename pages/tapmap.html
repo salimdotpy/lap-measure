@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tap on Map</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta name="theme-color" content="#f2f2f2"/>
+    <meta name="description" content="GPS Surveyor System">
+    <meta name="author" content="SalimTech">
+    <meta name="keywords" content="GPS Surveyor; Management System">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/mytoast.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+</head>
+<body class="mobile-open">
+<div class="loading">
+        <span class="fa-stack fa-lg tada animated infinite" style="position: absolute">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+        </span>
+    <i class="fa fa-spinner fa-pulse fa-4x" style="color: #fff"></i>
+</div>
+<nav style="margin-left: auto; width: 100%">
+    <div class="nav-btn">
+        <button id="mobile1"><a href="index.html"><i class="fa fa-arrow-left"></i></a></button>
+    </div>
+    <h3 class="app-name">Tap on Map</h3>
+    <a href="" style="visibility: collapse"><i class="fa fa-power-off"></i></a>
+</nav>
+<div class="map-wrapper">
+    <div id='map'></div>
+    <div id="result">
+        <div id="area">Area: 0</div>
+        <div id="perimeter">Perimeter: 0</div>
+    </div>
+    <input id='txt-marker-coord' type='text' value='' hidden>
+
+    <div class="map-keys">
+        <a href="#distanceModal" data-toggle="modal" style="font-size: 12px" onclick="pointsDist()">Distance</a>
+        <a onclick="document.location.reload();">Reset</a>
+        <a style="font-size: 12px">Capture</a>
+    </div>
+</div>
+<div id="distanceModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Distance</h4>
+            </div>
+            <div class="modal-body" id="distance" style="max-height: 70vh; overflow-y: auto">
+                <p>Distance between each points will appear here</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.2.0.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true'></script>
+<script src="../js/area.js"></script>
+<script>
+    getLocation();
+    setTimeout(function () {
+        initMap();
+    }, 1000);
+</script>
+</body>
+</html>

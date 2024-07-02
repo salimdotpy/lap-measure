@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GPS Surveyor App</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta name="theme-color" content="#f2f2f2"/>
+    <meta name="description" content="GPS Surveyor System">
+    <meta name="author" content="SalimTech">
+    <meta name="keywords" content="GPS Surveyor; Management System">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/mytoast.css">
+    <!--<link rel="stylesheet" href="../css/w3.css">-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+</head>
+<body class="mobile-open">
+<div class="loading">
+        <span class="fa-stack fa-lg tada animated infinite" style="position: absolute">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+        </span>
+    <i class="fa fa-spinner fa-pulse fa-4x" style="color: #fff"></i>
+</div>
+<div class="page-wrapper">
+    <div class="side-flow" id="aside"></div>
+    <aside>
+        <div class="side-header">
+            <img src="../images/favicon.png" alt="site logo" width="30%" id="logo">
+            <a href="">GPS Surveyor Application</a>
+        </div>
+        <ul class="side-nav tiny-scroll">
+            <li class="">
+                <a href="">
+                    <i class="fa fa-home menu-icon"></i>
+                    <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="fa fa-cog menu-icon"></i>
+                    <span class="menu-title">Settings</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="fa fa-refresh menu-icon"></i>
+                    <span class="menu-title">Converter</span>
+                </a>
+            </li>
+            <li class="side-nav-title">Extra</li>
+            <li>
+                <a href="">
+                    <i class="fa fa-info-circle menu-icon"></i>
+                    <span class="menu-title">Developer Info</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-share-alt menu-icon"></i>
+                    <span class="menu-title">Share app</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-bug menu-icon"></i>
+                    <span class="menu-title">Report Bug</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-power-off menu-icon"></i>
+                    <span class="menu-title">Exit</span>
+                </a>
+            </li>
+        </ul>
+        <div class="side-footer">
+            <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+                2024 &copy; &nbsp;<i>GPS Surveyor Application</i>
+            </span>
+        </div>
+    </aside>
+    <nav>
+        <div class="nav-btn">
+            <button class="hidden-xs hidden-sm" id="toggle"><i class="fa fa-bars"></i></button>
+            <button class="hidden-md hidden-lg" id="mobile"><i class="fa fa-bars"></i></button>
+        </div>
+        <h3 class="app-name">GPS Surveyor Application</h3>
+        <a href=""><i class="fa fa-power-off"></i></a>
+    </nav>
+    <main class="body-wrapper">
+        <div class="row">
+            <div class="col-md-6"><a href="tapmap.html">
+                <div class="panel z-depth-1">
+                    <div class="panel-body">
+                        <div class="row" style="">
+                            <div class="col-xs-9">
+                                <h5><b>Measure By Tapping</b></h5>
+                                <p>Measure the area & perimeter by tapping points on the map</p>
+                            </div>
+                            <div class="col-xs-3">
+                                <i class="fa fa-globe fa-4x" style="color: #d6d6d6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-6"><a href="pickmap.html">
+                <div class="panel z-depth-1">
+                    <div class="panel-body">
+                        <div class="row" style="">
+                            <div class="col-xs-9">
+                                <h5><b>Measure By Clicking</b></h5>
+                                <p>Measure the area & perimeter by clicking button to pick coordinates</p>
+                            </div>
+                            <div class="col-xs-3">
+                                <i class="fa fa-hand-o-up fa-4x" style="color: #d6d6d6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-6"><a href="">
+                <div class="panel z-depth-1">
+                    <div class="panel-body">
+                        <div class="row" style="">
+                            <div class="col-xs-9">
+                                <h5><b>Check Distance</b></h5>
+                                <p>Check distance between multiple points</p>
+                            </div>
+                            <div class="col-xs-3">
+                                <i class="fa fa-openid fa-4x" style="color: #d6d6d6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-6"><a href="">
+                <div class="panel z-depth-1">
+                    <div class="panel-body">
+                        <div class="row" style="">
+                            <div class="col-xs-9">
+                                <h5><b>Converter</b></h5>
+                                <p>Convert from one unit to another</p>
+                            </div>
+                            <div class="col-xs-3">
+                                <i class="fa fa-refresh fa-4x" style="color: #d6d6d6"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-6">
+                <div class="panel z-depth-1 about">
+                    <div class="panel-body">
+                        <b>About Us</b>
+                        <hr>
+                        <div class="row">
+                            <b class="col-xs-4">Designed By:</b>
+
+                            <div class="col-xs-8">Group of People</div>
+                        </div>
+                        <hr>
+                        <div class="row" id="about">
+                            <b class="col-xs-4">Supervised By:</b>
+
+                            <div class="col-xs-8">Mr. Personal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="../js/jquery-2.2.0.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+<script>
+    var startY;
+    var threshold = 150; // Minimum distance to trigger refresh (in pixels)
+    $("body").on("touchstart", function (e) {
+        startY = e.originalEvent.touches[0].pageY;
+    }).on("touchmove", function (e) {
+        var distance = e.originalEvent.touches[0].pageY - startY;
+        if (distance > threshold) {
+            $(".loading").show();
+        } else {
+            $(".loading").fadeOut("slow");
+        }
+    }).on("touchend", function (e) {
+        var distance = e.originalEvent.changedTouches[0].pageY - startY;
+        if (distance > threshold) {
+            // Perform your refresh action here
+            location.reload(); // For example, reload the page
+        }
+        $(".loading").fadeOut("slow");
+    });
+</script>
+</body>
+</html>
