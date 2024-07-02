@@ -31,7 +31,6 @@ function polygonArea(latitudes, longitudes) {
 
 //Perimeter function
 function polygonPerimeter(latitudes, longitudes) {
-    const R = 6378137; // Radius of the Earth in meters
     const numVertices = latitudes.length;
     var perimeter = 0;
 
@@ -59,7 +58,7 @@ function polygonPerimeter(latitudes, longitudes) {
 //Distance function
 // Function to calculate the distance between two lat/lng points using Haversine formula
 function haversineDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Radius of the Earth in kilometers
+    //const R = 6371; 
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
     const a =
@@ -96,7 +95,7 @@ function getDistance(obj, ele=false) {
         list += `<li class= "list-group-item" >Segment ${index + 1}:`;
         list += `<br>From: (${segment.from.lat}, ${segment.from.lng})`;
         list += `<br>To: (${segment.to.lat}, ${segment.to.lng})`;
-        list += `<br>Distance: ${segment.distance.toFixed(2)}km </li>`;
+        list += `<br>Distance: ${segment.distance.toFixed(2)}m </li>`;
 });
 if (ele) ele.innerHTML = list + "</ul>";
 }
