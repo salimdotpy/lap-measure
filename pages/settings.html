@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Settings</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta name="theme-color" content="#eee"/>
+    <meta name="description" content="GPS Surveyor System">
+    <meta name="author" content="SalimTech">
+    <meta name="keywords" content="GPS Surveyor; Management System">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/mytoast.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+</head>
+<body class="mobile-open">
+<div class="loading">
+        <span class="fa-stack fa-lg tada animated infinite" style="position: absolute">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+        </span>
+    <i class="fa fa-spinner fa-pulse fa-4x" style="color: #fff"></i>
+</div>
+<nav style="margin-left: auto; width: 100%">
+    <div class="nav-btn">
+        <button id="mobile1"><a href="index.html"><i class="fa fa-arrow-left"></i></a></button>
+    </div>
+    <h3 class="app-name">Settings</h3>
+    <a href="" style="visibility: collapse"><i class="fa fa-power-off"></i></a>
+</nav>
+<main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul style="display: flex; flex-direction: column;">
+                <li style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 50px; border-top: #fff 2px solid;">
+                    <label for="dist">Unit of Distance/Perimeter</label>
+                    <select id="dist" class="form-control" style="width: 25%;">
+                        <option value="mm">mm</option>
+                        <option value="cm">cm</option>
+                        <option value="dm">dm</option>
+                        <option value="m">m</option>
+                        <option value="km">km</option>
+                    </select>
+                </li>
+                <li style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 50px; border-top: #fff 2px solid;">
+                    <label for="are">Unit of Area</label>
+                    <select id="are" class="form-control" style="width: 25%;">
+                        <option value="mm">mm2</option>
+                        <option value="cm">cm2</option>
+                        <option value="dm">dm2</option>
+                        <option value="m">m2</option>
+                        <option value="ac">ac2</option>
+                        <option value="ha">ha2</option>
+                        <option value="km">km2</option>
+                    </select>
+                </li>
+                <li style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 50px; border-top: #fff 2px solid;">
+                    <label for="color">Polygon Color</label>
+                    <input type="color" id="color" value="#ff0000" class="form-control" style="width: 25%;"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<script src="../js/jquery-2.2.0.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Unit Converter</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta name="theme-color" content="#eee"/>
+    <meta name="description" content="GPS Surveyor System">
+    <meta name="author" content="SalimTech">
+    <meta name="keywords" content="GPS Surveyor; Management System">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="../images/favicon.png"/>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/mytoast.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+</head>
+<body class="mobile-open">
+<div class="loading">
+        <span class="fa-stack fa-lg tada animated infinite" style="position: absolute">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+        </span>
+    <i class="fa fa-spinner fa-pulse fa-4x" style="color: #fff"></i>
+</div>
+<nav style="margin-left: auto; width: 100%">
+    <div class="nav-btn">
+        <button id="mobile1"><a href="index.html"><i class="fa fa-arrow-left"></i></a></button>
+    </div>
+    <h3 class="app-name">Unit Converter</h3>
+    <a href="" style="visibility: collapse"><i class="fa fa-power-off"></i></a>
+</nav>
+<main class="container">
+    <div class="row">
+        <div class="col-md-6"><a href="#distanceConverter" data-toggle="modal">
+            <div class="panel z-depth-1">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <h5><b>Distance/Perimeter</b></h5>
+                            <p>Change Measurement Unit for their Calculation.</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <i class="fa fa-openid fa-4x" style="color: #d6d6d6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="col-md-6"><a href="#areaConverter" data-toggle="modal">
+            <div class="panel z-depth-1">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <h5><b>Area</b></h5>
+                            <p>Change Measurement Unit for Area Calculation.</p>
+                        </div>
+                        <div class="col-xs-3">
+                            <i class="fa fa-compass fa-4x" style="color: #d6d6d6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        </div>
+    </div>
+</main>
+
+<div id="distanceConverter" class="modal fade">
+    <div class="modal-dialog" style="margin-top: 25%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Distance/Perimeter Converter</h4>
+            </div>
+            <div class="modal-body">
+                <label id="dlFrom">Millimetre (mm)</label>:
+                <div class="input-group">
+                    <input type="number" id="dFrom" class="form-control"/>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <b>(mm)<span class="caret"></span></b>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0)" data-unit="mm">Millimetre (mm)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="cm">Centimetre (cm)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="dm">Decimetre (dm)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="m">Metre (m)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="km">Kilometre (km)</a></li>
+                        </ul>
+                    </div>
+                </div><br/>
+                <label id="dlTo">Centimetre (cm)</label>:
+                <div class="input-group">
+                    <input type="number" id="dTo" readonly class="form-control"/>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <b>(cm)<span class="caret"></span></b>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0)" data-unit="mm">Millimetre (mm)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="cm">Centimetre (cm)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="dm">Decimetre (dm)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="m">Metre (m)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="km">Kilometre (km)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="areaConverter" class="modal fade">
+    <div class="modal-dialog" style="margin-top: 25%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Area Converter</h4>
+            </div>
+            <div class="modal-body">
+                <label id="alFrom">Square Millimetre (mm<sup>2</sup>)</label>:
+                <div class="input-group">
+                    <input type="number" id="aFrom" class="form-control"/>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <b><span id="afu">(mm<sup>2</sup>)</span><span class="caret"></span></b>
+                        </button>
+                        <ul class="dropdown-menu pull-right" id="afus">
+                            <li><a href="javascript:void(0)" data-unit="mm">Square Millimetre (mm<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="cm">Square Centimetre (cm<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="dm">Square Decimetre (dm<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="m">Square Metre (m<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="ac">Square Acre (ac<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="ha">Square Hectare (ha<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="km">Square Kilometre (km<sup>2</sup>)</a></li>
+                        </ul>
+                    </div>
+                </div><br/>
+                <label id="alTo">Square Centimetre (cm<sup>2</sup>)</label>:
+                <div class="input-group">
+                    <input type="number" id="aTo" readonly class="form-control"/>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <b><span id="atu">(cm<sup>2</sup>)</span><span class="caret"></span></b>
+                        </button>
+                        <ul class="dropdown-menu pull-right" id="atus">
+                            <li><a href="javascript:void(0)" data-unit="mm">Square Millimetre (mm<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="cm">Square Centimetre (cm<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="dm">Square Decimetre (dm<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="m">Square Metre (m<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="ac">Square Acre (ac<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="ha">Square Hectare (ha<sup>2</sup>)</a></li>
+                            <li><a href="javascript:void(0)" data-unit="km">Square Kilometre (km<sup>2</sup>)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.2.0.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
