@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>GPS Surveyor App</title>
+    <title>LAP Measure</title>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -31,7 +31,7 @@
     <aside>
         <div class="side-header">
             <img src="../images/favicon.png" alt="site logo" width="30%" id="logo">
-            <a href="">GPS Surveyor Application</a>
+            <a href="">Land Area & Perimeter (LAP) Measure</a>
         </div>
         <ul class="side-nav tiny-scroll">
             <li class="">
@@ -60,19 +60,25 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="javascript:void(0)" onclick="def.Share('Thanks for sharing...')">
                     <i class="fa fa-share-alt menu-icon"></i>
                     <span class="menu-title">Share app</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="https://wa.me/+2348076738293?text=@LAP Measure \nType your message here">
+                    <i class="fa fa-whatsapp menu-icon"></i>
+                    <span class="menu-title">Feedback</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:salimdotpy@gmail.com?subject=Report Bug from LAP Measure&body=Type your message here">
                     <i class="fa fa-bug menu-icon"></i>
                     <span class="menu-title">Report Bug</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="javascript:void(0)" onclick="def.logOut('Exit App...')">
                     <i class="fa fa-power-off menu-icon"></i>
                     <span class="menu-title">Exit</span>
                 </a>
@@ -80,7 +86,7 @@
         </ul>
         <div class="side-footer">
             <span style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                2024 &copy; &nbsp;<i>GPS Surveyor Application</i>
+                2024 &copy; &nbsp;<i>LAP Measure</i>
             </span>
         </div>
     </aside>
@@ -89,7 +95,7 @@
             <button class="hidden-xs hidden-sm" id="toggle"><i class="fa fa-bars"></i></button>
             <button class="hidden-md hidden-lg" id="mobile"><i class="fa fa-bars"></i></button>
         </div>
-        <h3 class="app-name">GPS Surveyor Application</h3>
+        <h3 class="app-name">LAP Measure</h3>
         <a href=""><i class="fa fa-power-off"></i></a>
     </nav>
     <main class="body-wrapper">
@@ -97,7 +103,7 @@
             <div class="col-md-6"><a href="tapmap.html">
                 <div class="panel z-depth-1">
                     <div class="panel-body">
-                        <div class="row" style="">
+                        <div class="row">
                             <div class="col-xs-9">
                                 <h5><b>Measure By Tapping</b></h5>
                                 <p>Measure the area & perimeter by tapping points on the map</p>
@@ -113,7 +119,7 @@
             <div class="col-md-6"><a href="pickmap.html">
                 <div class="panel z-depth-1">
                     <div class="panel-body">
-                        <div class="row" style="">
+                        <div class="row">
                             <div class="col-xs-9">
                                 <h5><b>Measure By Clicking</b></h5>
                                 <p>Measure the area & perimeter by clicking button to pick coordinates</p>
@@ -126,26 +132,10 @@
                 </div>
             </a>
             </div>
-            <div class="col-md-6 hidden"><a href="">
-                <div class="panel z-depth-1">
-                    <div class="panel-body">
-                        <div class="row" style="">
-                            <div class="col-xs-9">
-                                <h5><b>Check Distance</b></h5>
-                                <p>Check distance between multiple points</p>
-                            </div>
-                            <div class="col-xs-3">
-                                <i class="fa fa-openid fa-4x" style="color: #d6d6d6"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            </div>
             <div class="col-md-6"><a href="">
                 <div class="panel z-depth-1">
                     <div class="panel-body">
-                        <div class="row" style="">
+                        <div class="row">
                             <div class="col-xs-9">
                                 <h5><b>Converter</b></h5>
                                 <p>Convert from one unit to another</p>
@@ -163,17 +153,14 @@
                     <div class="panel-body">
                         <b>About Us</b>
                         <hr>
-                        <div class="row">
-                            <b class="col-xs-4">Designed By:</b>
-
-                            <div class="col-xs-8">Group of People</div>
-                        </div>
-                        <hr>
-                        <div class="row" id="about">
-                            <b class="col-xs-4">Supervised By:</b>
-
-                            <div class="col-xs-8">Mr. Personal</div>
-                        </div>
+                        <p class="text-center" id="about">
+                            <b>Land Area & Perimeter (LAP) Measure</b><br><br>
+                            Design and Developed by 
+                            <a href="studentListModal" data-toggle="modal"><b>HNDII 2023/2024</b></a>
+                            Set and Supervised by
+                            <b>Engr. Abdulwakil Adekunle Kasali.</b> All rights reserved.
+                            For Enquiry, call <a href="tel:+2347030337708">+2347030337708</a>
+                        </p>
                     </div>
                 </div>
             </div>

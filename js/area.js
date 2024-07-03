@@ -1,5 +1,5 @@
 const R = 6378137; // Radius of the Earth in meters
-var cord_pos = {lat: 6.1334096, lng: 6.8075828};
+var cord_pos = {lat: 0, lng: 0};
 
 // Convert degrees to radians
 function degToRad(degrees) {
@@ -161,17 +161,22 @@ var myPolygon, cords;
 var myMarker, mc = 0;
 var map;
 
-function initMap() {
+function initMap(pick=false) {
     getLocation();
+    var zoom = pick? 20 : 17;
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 17,
+        zoom: zoom,
         center: cord_pos,
         mapTypeId: google.maps.MapTypeId.TERRAIN
     });
     placeMarker(cord_pos, true);
     google.maps.event.addListener(map, 'click', function (event) {
-        placeMarker(event.latLng, false, true);
-        updatePoygon()
+        if(pick){
+            toast_it({ text: 'Click pick button to pick current coordinate!', icon: 'info' });
+        }else{
+            placeMarker(event.latLng, false, true);
+            updatePoygon()
+        }
     });
 }
 

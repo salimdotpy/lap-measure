@@ -1,2 +1,2 @@
-# gps-surveyor
-Land Survey application using Google map
+# lap-measure
+Land Area and Perimeter Measure Application using Google Map
