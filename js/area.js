@@ -1,5 +1,5 @@
 const R = 6378137; // Radius of the Earth in meters
-var cord_pos = {lat: 0, lng: 0};
+var cord_pos = {lat: 7.7200717, lng: 4.41305};
 
 // Convert degrees to radians
 function degToRad(degrees) {
