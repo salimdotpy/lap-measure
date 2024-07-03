@@ -54,7 +54,7 @@
             </li>
             <li class="side-nav-title">Extra</li>
             <li>
-                <a href="">
+                <a href="#studentListModal" data-toggle="modal">
                     <i class="fa fa-info-circle menu-icon"></i>
                     <span class="menu-title">Developer Info</span>
                 </a>
@@ -156,7 +156,7 @@
                         <p class="text-center" id="about">
                             <b>Land Area & Perimeter (LAP) Measure</b><br><br>
                             Design and Developed by 
-                            <a href="studentListModal" data-toggle="modal"><b>HNDII 2023/2024</b></a>
+                            <a href="#studentListModal" data-toggle="modal"><b>HNDII 2023/2024</b></a>
                             Set and Supervised by
                             <b>Engr. Abdulwakil Adekunle Kasali.</b> All rights reserved.
                             For Enquiry, call <a href="tel:+2347030337708">+2347030337708</a>
@@ -166,6 +166,32 @@
             </div>
         </div>
     </main>
+</div>
+<div id="studentListModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Developer List</h4>
+            </div>
+            <div class="modal-body" style="max-height: 70vh; overflow-y: auto">
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                        NAME <span class="badge">MATRIC NO</span>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        NAME <span class="badge">MATRIC NO</span>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        NAME <span class="badge">MATRIC NO</span>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="../js/jquery-2.2.0.min.js"></script>
 <script src="../js/bootstrap.js"></script>
