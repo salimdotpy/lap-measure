@@ -159,7 +159,7 @@ function showError(error) {
 
 var myPolygon, cords;
 var myMarker, mc = 0;
-var map, settings_array = {d_unit: 'cm', a_unit: 'cm', poly_color: 'ff0000'};
+var map, settings_array = {d_unit: 'cm', a_unit: 'cm', poly_color: '#ff0000'};
 
 function initMap(pick=false) {
     getLocation();

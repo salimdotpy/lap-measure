@@ -41,7 +41,7 @@
                     <ul>
                         <li>
                             <label for="dist">Unit of Distance/Perimeter</label>
-                            <select id="dist" class="form-control" style="width: 26%;" onblur="Settings(this)">
+                            <select id="dist" class="form-control" style="width: 26%;" onchange="Settings(this)">
                                 <option value="mm">mm</option>
                                 <option value="cm">cm</option>
                                 <option value="dm">dm</option>
@@ -55,7 +55,7 @@
                         </li>
                         <li style="border-top: #eee 2px solid;">
                             <label for="are">Unit of Area</label>
-                            <select id="are" class="form-control" style="width: 26%;" onblur="Settings(this)">
+                            <select id="are" class="form-control" style="width: 26%;" onchange="Settings(this)">
                                 <option value="mm2">mm2</option>
                                 <option value="cm2">cm2</option>
                                 <option value="dm2">dm2</option>
@@ -70,7 +70,7 @@
                         </li>
                         <li style="border-top: #eee 2px solid;">
                             <label for="color">Polygon Color</label>
-                            <input type="color" id="color" value="#ff0000" class="form-control" style="width: 26%;" onblur="Settings(this)"/>
+                            <input type="color" id="color" value="#ff0000" class="form-control" style="width: 26%;" onchange="Settings(this)"/>
                         </li>
                     </ul>
                 </div>
