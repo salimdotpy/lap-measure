@@ -159,7 +159,7 @@ function showError(error) {
 
 var myPolygon, cords;
 var myMarker, mc = 0;
-var map;
+var map, settings_array = {d_unit: 'cm', a_unit: 'cm', poly_color: 'ff0000'};
 
 function initMap(pick=false) {
     getLocation();
@@ -253,10 +253,10 @@ function updatePoygon() {
     // Construct the polygon and add to the map:
     myPolygon = new google.maps.Polygon({
         paths: polygonCoords,
-        strokeColor: '#FF0000',
+        strokeColor: settings_array.poly_color,
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: '#FF0000',
+        fillColor: settings_array.poly_color,
         fillOpacity: 0.35
     });
 
@@ -272,4 +272,17 @@ function updatePoygon() {
 function pointsDist() {
     result = document.getElementById('distance');
     getDistance(cords, result);
+}
+
+function convertLength(value, from, to) {
+    const units = {mm: 1, cm: 10, dm: 100, m: 1000, km: 1000000, in: 25.4, ft: 304.8, yd: 914.4, mi: 1609340};
+    const fromMulti = units[from];
+    const toMulti = units[to];
+    return (value * fromMulti) / toMulti;
+}
+function convertArea(value, from, to) {
+    const units = {mm: 1, cm: 100, dm: 1000, m: 1000000, km: 1000000000000, in: 645.16, ft: 92903, yd: 836127, ac: 4046866, ha: 10000000000};
+    const fromMulti = units[from];
+    const toMulti = units[to];
+    return (value * fromMulti) / toMulti;
 }

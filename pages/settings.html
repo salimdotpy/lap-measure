@@ -36,39 +36,56 @@
 <main class="container">
     <div class="row">
         <div class="col-md-12">
-            <ul style="display: flex; flex-direction: column;">
-                <li style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 50px; border-top: #fff 2px solid;">
-                    <label for="dist">Unit of Distance/Perimeter</label>
-                    <select id="dist" class="form-control" style="width: 25%;">
-                        <option value="mm">mm</option>
-                        <option value="cm">cm</option>
-                        <option value="dm">dm</option>
-                        <option value="m">m</option>
-                        <option value="km">km</option>
-                    </select>
-                </li>
-                <li style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 50px; border-top: #fff 2px solid;">
-                    <label for="are">Unit of Area</label>
-                    <select id="are" class="form-control" style="width: 25%;">
-                        <option value="mm">mm2</option>
-                        <option value="cm">cm2</option>
-                        <option value="dm">dm2</option>
-                        <option value="m">m2</option>
-                        <option value="ac">ac2</option>
-                        <option value="ha">ha2</option>
-                        <option value="km">km2</option>
-                    </select>
-                </li>
-                <li style="display: flex; justify-content: space-between; align-items: center; width: 100%; height: 50px; border-top: #fff 2px solid;">
-                    <label for="color">Polygon Color</label>
-                    <input type="color" id="color" value="#ff0000" class="form-control" style="width: 25%;"/>
-                </li>
-            </ul>
+            <div class="panel z-depth-1" id="settings-panel">
+                <div class="panel-body">
+                    <ul>
+                        <li>
+                            <label for="dist">Unit of Distance/Perimeter</label>
+                            <select id="dist" class="form-control" style="width: 26%;" onblur="Settings(this)">
+                                <option value="mm">mm</option>
+                                <option value="cm">cm</option>
+                                <option value="dm">dm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                                <option value="in">in</option>
+                                <option value="ft">ft</option>
+                                <option value="yd">yd</option>
+                                <option value="mi">mi</option>
+                            </select>
+                        </li>
+                        <li style="border-top: #eee 2px solid;">
+                            <label for="are">Unit of Area</label>
+                            <select id="are" class="form-control" style="width: 26%;" onblur="Settings(this)">
+                                <option value="mm2">mm2</option>
+                                <option value="cm2">cm2</option>
+                                <option value="dm2">dm2</option>
+                                <option value="m2">m2</option>
+                                <option value="km2">km2</option>
+                                <option value="in2">in2</option>
+                                <option value="ft2">ft2</option>
+                                <option value="yd2">yd2</option>
+                                <option value="ac">ac</option>
+                                <option value="ha">ha</option>
+                            </select>
+                        </li>
+                        <li style="border-top: #eee 2px solid;">
+                            <label for="color">Polygon Color</label>
+                            <input type="color" id="color" value="#ff0000" class="form-control" style="width: 26%;" onblur="Settings(this)"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </main>
 <script src="../js/jquery-2.2.0.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/main.js"></script>
+<script>
+    function Settings(ele) {
+        var msg = $(ele).prev('label').text()+' set to '+$(ele).val();
+        toast_it({text: msg, icon: 'info'});
+    }
+</script>
 </body>
 </html>

@@ -71,43 +71,55 @@
 </main>
 
 <div id="distanceConverter" class="modal fade">
-    <div class="modal-dialog" style="margin-top: 25%">
+    <div class="modal-dialog" style="margin-top: 25vh">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Distance/Perimeter Converter</h4>
             </div>
             <div class="modal-body">
-                <label id="dlFrom">Millimetre (mm)</label>:
-                <div class="input-group">
-                    <input type="number" id="dFrom" class="form-control"/>
-                    <div class="input-group-btn">
-                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <b>(mm)<span class="caret"></span></b>
-                        </button>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0)" data-unit="mm">Millimetre (mm)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="cm">Centimetre (cm)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="dm">Decimetre (dm)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="m">Metre (m)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="km">Kilometre (km)</a></li>
-                        </ul>
+                <div id="dFrom">
+                    <label>Millimetre (mm)</label>:
+                    <div class="input-group">
+                        <input type="number" class="form-control" unit="mm" onkeyup="convertInput(this, 'dTo')"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <b>(mm)<span class="caret"></span></b>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="javascript:void(0)" data-unit="mm">Millimetre (mm)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="cm">Centimetre (cm)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="dm">Decimetre (dm)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="m">Metre (m)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="km">Kilometre (km)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="in">Inch (in)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ft">feet (ft)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="yd">Yard (yd)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="mi">Mile (mi)</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div><br/>
-                <label id="dlTo">Centimetre (cm)</label>:
-                <div class="input-group">
-                    <input type="number" id="dTo" readonly class="form-control"/>
-                    <div class="input-group-btn">
-                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <b>(cm)<span class="caret"></span></b>
-                        </button>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0)" data-unit="mm">Millimetre (mm)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="cm">Centimetre (cm)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="dm">Decimetre (dm)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="m">Metre (m)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="km">Kilometre (km)</a></li>
-                        </ul>
+                <div id="dTo">
+                    <label>Centimetre (cm)</label>:
+                    <div class="input-group">
+                        <input type="number" readonly class="form-control" unit="cm"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <b>(cm)<span class="caret"></span></b>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="javascript:void(0)" data-unit="mm">Millimetre (mm)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="cm">Centimetre (cm)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="dm">Decimetre (dm)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="m">Metre (m)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="km">Kilometre (km)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="in">Inch (in)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ft">feet (ft)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="yd">Yard (yd)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="mi">Mile (mi)</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,47 +130,58 @@
     </div>
 </div>
 <div id="areaConverter" class="modal fade">
-    <div class="modal-dialog" style="margin-top: 25%">
+    <div class="modal-dialog" style="margin-top: 25vh">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Area Converter</h4>
             </div>
             <div class="modal-body">
-                <label id="alFrom">Square Millimetre (mm<sup>2</sup>)</label>:
-                <div class="input-group">
-                    <input type="number" id="aFrom" class="form-control"/>
-                    <div class="input-group-btn">
-                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <b><span id="afu">(mm<sup>2</sup>)</span><span class="caret"></span></b>
-                        </button>
-                        <ul class="dropdown-menu pull-right" id="afus">
-                            <li><a href="javascript:void(0)" data-unit="mm">Square Millimetre (mm<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="cm">Square Centimetre (cm<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="dm">Square Decimetre (dm<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="m">Square Metre (m<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="ac">Square Acre (ac<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="ha">Square Hectare (ha<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="km">Square Kilometre (km<sup>2</sup>)</a></li>
-                        </ul>
+                <div id="aFrom">
+                    <label>Square Millimetre (mm<sup>2</sup>)</label>:
+                    <div class="input-group">
+                        <input type="number" class="form-control" unit="mm" onkeyup="convertInput(this, 'aTo')"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <b>(mm<sup>2</sup>)<span class="caret"></span></b>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="javascript:void(0)" data-unit="mm">Square Millimetre (mm<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="cm">Square Centimetre (cm<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="dm">Square Decimetre (dm<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="m">Square Metre (m<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="km">Square Kilometre (km<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="in">Square Inche (in<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ft">Square Feet (ft<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="yd">Square Yard (yd<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ac">Acre (ac)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ha">Hectare (ha)</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div><br/>
-                <label id="alTo">Square Centimetre (cm<sup>2</sup>)</label>:
-                <div class="input-group">
-                    <input type="number" id="aTo" readonly class="form-control"/>
-                    <div class="input-group-btn">
-                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <b><span id="atu">(cm<sup>2</sup>)</span><span class="caret"></span></b>
-                        </button>
-                        <ul class="dropdown-menu pull-right" id="atus">
-                            <li><a href="javascript:void(0)" data-unit="mm">Square Millimetre (mm<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="cm">Square Centimetre (cm<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="dm">Square Decimetre (dm<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="m">Square Metre (m<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="ac">Square Acre (ac<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="ha">Square Hectare (ha<sup>2</sup>)</a></li>
-                            <li><a href="javascript:void(0)" data-unit="km">Square Kilometre (km<sup>2</sup>)</a></li>
-                        </ul>
+                </div>
+                <br/>
+                <div id="aTo">
+                    <label>Square Centimetre (cm<sup>2</sup>)</label>:
+                    <div class="input-group">
+                        <input type="number" readonly class="form-control" unit="cm"/>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <b>(cm<sup>2</sup>)<span class="caret"></span></b>
+                            </button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="javascript:void(0)" data-unit="mm">Square Millimetre (mm<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="cm">Square Centimetre (cm<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="dm">Square Decimetre (dm<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="m">Square Metre (m<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="km">Square Kilometre (km<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="in">Square Inche (in<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ft">Square Feet (ft<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="yd">Square Yard (yd<sup>2</sup>)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ac">Acre (ac)</a></li>
+                                <li><a href="javascript:void(0)" data-unit="ha">Hectare (ha)</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,5 +194,33 @@
 <script src="../js/jquery-2.2.0.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/main.js"></script>
+<script src="../js/area.js"></script>
+<script>
+    $(document).ready(function () {
+        converElement($('#dFrom')); converElement($('#dTo'));
+        converElement($('#aFrom')); converElement($('#aTo'));
+        function converElement(ele) {
+            ele.find('ul>li>a').each(function (i, v) {
+            $(v).click(function () {
+                var sup = (ele.attr('id')=='aFrom' || ele.attr('id')=='aTo') && ($(this).data('unit') !='ac' || $(this).data('unit') != 'ha')? '<sup>2</sup>':'';
+                ele.find('input').attr('unit', $(this).data('unit'))
+                ele.find('label').html($(this).html());
+                ele.find('button').html(`<b>(${$(this).data('unit')}${sup})<span class="caret"></span></b>`);
+                var from = (ele.attr('id')=='dFrom' || ele.attr('id')=='dTo')? '#dFrom input' : '#aFrom input';
+                var to = (ele.attr('id')=='dFrom' || ele.attr('id')=='dTo')? 'dTo' : 'aTo';
+                convertInput($(from), to);
+            });
+        });
+    }
+    });
+    function convertInput(ele, result){
+        ele = $(ele);
+        resultInput = $('#'+result).find('input');
+        if(result=='dTo'){
+            resultInput.val(convertLength(ele.val(), ele.attr('unit'),  resultInput.attr('unit')));
+        }else
+        resultInput.val(convertArea(ele.val(), ele.attr('unit'),  resultInput.attr('unit')));
+    }
+</script>
 </body>
 </html>
