@@ -286,3 +286,7 @@ function convertArea(value, from, to) {
     const toMulti = units[to];
     return (value * fromMulti) / toMulti;
 }
+
+function Capture() {
+    toast_it({text: 'Not yet implemented', icon: 'info'});
+}
