@@ -281,7 +281,7 @@ function convertLength(value, from, to) {
     return (value * fromMulti) / toMulti;
 }
 function convertArea(value, from, to) {
-    const units = {mm: 1, cm: 100, dm: 1000, m: 1000000, km: 1000000000000, in: 645.16, ft: 92903, yd: 836127, ac: 4046866, ha: 10000000000};
+    const units = {mm: 1, cm: 100, dm: 10000, m: 1000000, km: 1000000000000, in: 645.16, ft: 92903, yd: 836127, ac: 4046866, ha: 10000000000};
     const fromMulti = units[from];
     const toMulti = units[to];
     return (value * fromMulti) / toMulti;
