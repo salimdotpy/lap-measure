@@ -160,6 +160,7 @@ function showError(error) {
 var myPolygon, cords;
 var myMarker, mc = 0;
 var map, settings_array = {d_unit: 'cm', a_unit: 'cm', poly_color: '#ff0000'};
+var mapType = ["hybrid","roadmap","satellite","terrain", 0];
 
 function initMap(pick=false) {
     getLocation();
@@ -287,6 +288,8 @@ function convertArea(value, from, to) {
     return (value * fromMulti) / toMulti;
 }
 
-function Capture() {
-    toast_it({text: 'Not yet implemented', icon: 'info'});
+function changeMap() {
+    map.setMapTypeId(mapType[mapType[-1]]);
+    if (mapType[-1] < 3) mapType[-1] += 1;
+    else mapType[-1] = 0;
 }
