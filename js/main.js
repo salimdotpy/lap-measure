@@ -89,6 +89,26 @@ function toast_it(option){
     toasts.createToast(option);
 }
 
+ var settings_array;
+
+ try {
+    settings_array = {
+        d_unit: localStorage.getItem('dist') || 'cm', 
+        a_unit: localStorage.getItem('are') || 'cm', 
+        poly_color: localStorage.getItem('color') || '#ff0000'
+    };
+    $('#dist').val(localStorage.getItem('dist') || 'cm');
+    $('#are').val(localStorage.getItem('are') || 'cm');
+    $('#color').val(localStorage.getItem('color') || '#ff0000');
+ } catch (error) {
+    settings_array = {d_unit: 'cm', a_unit: 'cm', poly_color: '#ff0000'};
+ }
+
+function Settings(ele) {
+    var msg = $(ele).prev('label').text()+' set to '+$(ele).val();
+    toast_it({text: msg, icon: 'info'});
+    localStorage.setItem(ele.id, $(ele).val());
+}
 
 $("#toggle").on("click", function () {
     $("body").toggleClass("open");

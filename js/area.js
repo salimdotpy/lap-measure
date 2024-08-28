@@ -95,7 +95,7 @@ function getDistance(obj, ele=false) {
         list += `<li class= "list-group-item" >Segment ${index + 1}:`;
         list += `<br>From: (${segment.from.lat}, ${segment.from.lng})`;
         list += `<br>To: (${segment.to.lat}, ${segment.to.lng})`;
-        list += `<br>Distance: ${segment.distance.toFixed(2)}m </li>`;
+        list += `<br>Distance: ${convertLength(segment.distance, 'm', settings_array.d_unit).toFixed(2)}${settings_array.d_unit} </li>`;
 });
 if (ele) ele.innerHTML = list + "</ul>";
 }
@@ -107,8 +107,8 @@ function getArea(obj, ele) {
         latitudes.push(i.lat);
         longitudes.push(i.lng);
     }
-    const area = polygonArea(latitudes, longitudes);
-    ele.innerHTML = `Area: ${area.toFixed(5)}m²`;
+    const area = convertArea(polygonArea(latitudes, longitudes), 'm', settings_array.a_unit);
+    ele.innerHTML = `Area: ${area.toFixed(5)}${settings_array.d_unit}²`;
 }
 
 function getPerimeter(obj, ele) {
@@ -118,8 +118,8 @@ function getPerimeter(obj, ele) {
         latitudes.push(i.lat);
         longitudes.push(i.lng);
     }
-    const perimeter = polygonPerimeter(latitudes, longitudes);
-    ele.innerHTML = `Perimeter: ${perimeter.toFixed(5)}m`;
+    const perimeter = convertLength(polygonPerimeter(latitudes, longitudes), 'm', settings_array.d_unit);
+    ele.innerHTML = `Perimeter: ${perimeter.toFixed(5)}${settings_array.d_unit}`;
 }
 //Get location function
 function getLocation() {
@@ -159,7 +159,7 @@ function showError(error) {
 
 var myPolygon, cords;
 var myMarker, mc = 0;
-var map, settings_array = {d_unit: 'cm', a_unit: 'cm', poly_color: '#ff0000'};
+var map;
 var mapType = ["hybrid","roadmap","satellite","terrain", 0];
 
 function initMap(pick=false) {
@@ -168,7 +168,7 @@ function initMap(pick=false) {
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: zoom,
         center: cord_pos,
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.HYBRID
     });
     placeMarker(cord_pos, true);
     google.maps.event.addListener(map, 'click', function (event) {

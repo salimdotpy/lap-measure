@@ -56,14 +56,14 @@
                         <li style="border-top: #eee 2px solid;">
                             <label for="are">Unit of Area</label>
                             <select id="are" class="form-control" style="width: 26%;" onchange="Settings(this)">
-                                <option value="mm2">mm2</option>
-                                <option value="cm2">cm2</option>
-                                <option value="dm2">dm2</option>
-                                <option value="m2">m2</option>
-                                <option value="km2">km2</option>
-                                <option value="in2">in2</option>
-                                <option value="ft2">ft2</option>
-                                <option value="yd2">yd2</option>
+                                <option value="mm">mm2</option>
+                                <option value="cm">cm2</option>
+                                <option value="dm">dm2</option>
+                                <option value="m">m2</option>
+                                <option value="km">km2</option>
+                                <option value="in">in2</option>
+                                <option value="ft">ft2</option>
+                                <option value="yd">yd2</option>
                                 <option value="ac">ac</option>
                                 <option value="ha">ha</option>
                             </select>
@@ -81,11 +81,5 @@
 <script src="../js/jquery-2.2.0.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/main.js"></script>
-<script>
-    function Settings(ele) {
-        var msg = $(ele).prev('label').text()+' set to '+$(ele).val();
-        toast_it({text: msg, icon: 'info'});
-    }
-</script>
 </body>
 </html>
