@@ -108,7 +108,7 @@ function getArea(obj, ele) {
         longitudes.push(i.lng);
     }
     const area = convertArea(polygonArea(latitudes, longitudes), 'm', settings_array.a_unit);
-    ele.innerHTML = `Area: ${area.toFixed(5)}${settings_array.d_unit}²`;
+    ele.innerHTML = `Area: ${area.toFixed(5)}${settings_array.a_unit}²`;
 }
 
 function getPerimeter(obj, ele) {
